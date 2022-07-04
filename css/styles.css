@@ -244,7 +244,7 @@ ul {
 .join-container {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
+  margin-left: 90px;
   padding-top: 12px;
 }
 
@@ -291,6 +291,73 @@ ul {
 .footer-socials-icon {
   fill: var(--white-color);
 }
+
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 93px;
+  padding-top: 12px;
+}
+
+.footer-subscribe {
+  margin-bottom:20px ;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  
+  color: var(--white-color);
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding-left:16px;
+
+  color: rgba(255, 255, 255, 0.6);
+  background-color:var(--baner-color)
+  
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;   
+
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  margin-left: 12px;
+
+  color:var(--white-color);
+  background-color: var(--accent-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+}
+
+.subscribe-icon {
+  fill:var(--white-color);
+  margin-left: 10px;  
+}
+
 
 /*Main Studio*/
 
