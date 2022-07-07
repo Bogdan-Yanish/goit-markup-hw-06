@@ -386,6 +386,7 @@
       </section>
     </main>
 
+    <!-- Футер -->
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-info">
@@ -434,11 +435,9 @@
           </ul>
         </div>
         <div class="subscribe-container">
-          <p class="footer-subscribe">Підпишіться на розсилку</p>
-          <form class="subscribe-form" name="subscribe" autocomplete="on" novalidate>
-            <label>
-              <input class="subscribe-input" type="email" name="email" placeholder="E-mail" />
-            </label>
+          <b class="footer-subscribe">Підпишіться на розсилку</b>
+          <form class="subscribe-form" name="subscribe">
+            <input class="subscribe-input" type="email" name="email" placeholder="E-mail" />
             <button class="subscribe-btn" type="submit">
               Підписатись
               <svg class="subscribe-icon" width="24" height="24">
@@ -458,8 +457,57 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- Інтерфейс модального вікна -->
+        <p class="feedback-title">Залишіть свої дані, ми Вам зателефонуємо</p>
+        <form name="feedback-form">
+          <div class="feedback-field">
+            <label class="feedback-label" for="user-name">Ім'я</label>
+            <div class="feedback-box">
+              <input type="text" id="user-name" name="name" />
+              <svg class="feedback-icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-avatar"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="user-tel">Телефон</label>
+            <div class="feedback-box">
+              <input type="tel" id="user-tel" name="tel" />
+              <svg class="feedback-icon" width="13" height="13">
+                <use href="./images/icons.svg#icon-phone-call"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="user-mail">Пошта</label>
+            <div class="feedback-box">
+              <input type="email" id="user-mail" name="mail" />
+              <svg class="feedback-icon" width="15" height="12">
+                <use href="./images/icons.svg#icon-email-send"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="user-comment">Коментар</label>
+            <textarea name="comment" id="user-comment" placeholder="Введіть текст"></textarea>
+          </div>
+
+          <div class="feedback-policy">
+            <label>
+              <input type="checkbox" name="policy" value="policy" />
+              Погоджуюсь на розсилку і приймаю <a href="#">Умови Договору</a>
+            </label>
+          </div>
+
+          <button class="feedback-btn" type="submit">Надіслати</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
