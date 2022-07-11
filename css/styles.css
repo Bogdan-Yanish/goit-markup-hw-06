@@ -11,6 +11,7 @@
   --icon-color:#AFB1B8;
   --bg-color-icon:#FFFFFF1A;
   --border-color:#EEEEEE;
+  --animation:250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -109,7 +110,7 @@ ul {
     
   color: var(--title-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animatiom);
 
   font-weight: 500;
   font-size: 14px;
@@ -164,7 +165,7 @@ ul {
   
   color: inherit;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation);
   
   font-weight: 500;
   font-size: 14px;
@@ -214,7 +215,7 @@ ul {
 }
 
 .footer-link .contact {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var (--animation);
 
   color: var(--primary-text-color);
 
@@ -277,7 +278,7 @@ ul {
 
   background-color: var(--bg-color-icon);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animation);
 }
 
 .footer-socials-link:hover {
@@ -615,12 +616,12 @@ ul {
   width: 44px;
   height: 44px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: background-color var(--animation); 
 }
 
 .socials-icon {
   fill:var(--icon-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .team-socials-link:hover .socials-icon {
@@ -670,14 +671,14 @@ ul {
   border: 1px solid var(--icon-color);
   border-radius: 4px;  
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animation);
   
   text-decoration: none;
 }
 
 .clients-icon {
   fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation);
 }
 
 .clients-link:hover .clients-icon {
@@ -718,7 +719,7 @@ ul {
   background-color: var(--button-color);
   color: var(--title-text-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animation), background-color var(--animation);
 
   font-family: inherit;
   font-weight: 500;
@@ -755,7 +756,7 @@ ul {
   display: block;
   text-decoration: none;  
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animation));
 }
 
 .portfolio-link:hover {
@@ -780,7 +781,7 @@ ul {
   bottom: 0;
   left: 0;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animation);
 
   padding: 63px 24px;
 
@@ -832,7 +833,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.2);
   
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animation);
 }
 
 .backdrop.is-hidden {
@@ -857,7 +858,7 @@ ul {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  transition: transform var(--animation), opacity var(--animation) ;
 
   border-radius: 4px;
 
@@ -876,6 +877,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill var(--animation);
 
   background-color: var(--white-color);
   background-size: contain;
@@ -891,7 +893,7 @@ ul {
   fill: var(--accent-color);
 }
 
-.feedback-title {
+.form-title {
   margin-top: 40px;
   margin-bottom: 12px;
   
@@ -899,114 +901,150 @@ ul {
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.03em;  
+  text-align: center;
 }
 
-.feedback-field {
+.form-field {
   display: flex;
   flex-direction: column;
   width: 448px;
   margin: auto;
-  margin-bottom: 10px;  
+  gap: 4px;
 }
 
-.feedback-label {
-  margin-bottom: 4px;
-
-  color: var(--primary-text-color);
-
+.form-field-title {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.01em;  
-}
+  letter-spacing: 0.01em;
+} 
 
-.feedback-box {
+.form-wrap {
   position: relative;
+  margin-bottom: 10px;
 }
 
-.feedback-box input {
+.form-input,
+.form-textarea {
+width: 100%;
+
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+transition: border-color var(--animation);
+}
+
+.form-input {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-  width: 100%;
-  
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
-.feedback-icon {
+.form-icon {
   position: absolute;
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-
+  
   fill:var(--title-text-color);  
+
+  transition: fill var(--animation);
 }
 
-.feedback-box input:focus,
-.feedback-field textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   border-color: var(--accent-color);
   cursor: pointer;
   outline: none;
 }
 
-.feedback-box input:focus + .feedback-icon {
+.form-input:focus + .form-icon {
   fill:var(--accent-color);
 }
 
-.feedback-field textarea {
+.form-textarea {
   resize: none;                  
-  width: 448px;
   height: 120px;
   padding: 12px 16px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.feedback-field textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-  
+ 
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 
-.feedback-policy {
-  margin-top: 10px;
-  margin-bottom: 30px;
-
-  text-align: center;
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
-.feedback-policy label {
-  color: #757575;
-
+.form-agree {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+    
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  text-align: center;  
 }
 
-.feedback-policy a {
+.form-agree-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;  
+}
+
+.form-icon-checkbox {
+  position: absolute;
+  top: 50%;
+  left: 54px;
+  transform: translateY(-50%);
+  
+  opacity: 1;
+  
+  fill: var(--title-text-color);
+}
+
+.form-icon-check {
+  position: absolute;
+  top: 50%;
+  left: 54px;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  fill:var(--accent-color);
+
+  transition: opacity var(--animation);
+}
+
+.form-agree-checkbox:checked ~ .form-icon-check {
+  opacity: 1;
+}
+
+.form-agree-link {
   color: var(--accent-color);
 }
 
-.feedback-btn {
+.form-send-btn {
   display: block;
   margin: auto;
   width: 200px;
   height: 50px;
+  padding: 0;
 
   background-color: #188CE8;
   color:var(--white-color);
   
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
 
